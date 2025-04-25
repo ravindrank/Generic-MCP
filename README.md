@@ -32,5 +32,8 @@ Steps to build:
 
 7. You will be prompted for confirmation post which you should see:
 
-GitHub Copilot
-The reversed output of "SuuperMCPServer" is "revreSPCMrepuuS". Let me know if you need further assistance!
+![alt text](reverse.png)
+
+Added CallAPI
+
+![alt text](callapi.png)
