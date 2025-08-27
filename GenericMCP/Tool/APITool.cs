@@ -2,9 +2,17 @@
 using System.Text.Json;
 using ModelContextProtocol.Server;
 
+/// <summary>
+/// Provides a tool for making HTTP API calls.
+/// </summary>
 [McpServerToolType]
 public static class APITool
 {
+    /// <summary>
+    /// Accepts an HTTP endpoint and calls it, returning the result.
+    /// </summary>
+    /// <param name="endpoint">The URL of the HTTP endpoint to call.</param>
+    /// <returns>The content of the HTTP response as a string.</returns>
     [McpServerTool, Description("Accepts an http end-point and calls it, returns the result.")]
     public static async Task<string> CallAPI(string endpoint)
     {
