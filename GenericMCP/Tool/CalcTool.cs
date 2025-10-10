@@ -16,6 +16,19 @@ public class CalcTool
     /// <param name="num2">Number1.</param>
     /// <returns>Sum of two numbers.</returns>
     [McpServerTool, Description("Sends Sum back to the client.")]
-    public static int AddNumbers(int num1, int num2) => num1+num2;
-
+    public static long? AddNumbers(long num1, long num2)
+    {
+        long? sum = null;
+        try
+        {
+            sum = num1 + num2;
+        }
+        catch(Exception ex) {
+            // Not sure yet this exception handling even works
+            Console.WriteLine($"Exception occurred:{ex.Message}");
+            sum = null;
+            throw;
+        }
+        return sum;
+    }
 }
